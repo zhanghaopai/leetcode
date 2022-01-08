@@ -4,21 +4,21 @@ package com.pai.leetcode.binarytree.entity;
  * 二叉树实体
  */
 public class TreeNode {
-    public int value;
+    public int val;
     public TreeNode left;
     public TreeNode right;
 
     public TreeNode() {
     }
 
-    public TreeNode(int value) {
-        this.value = value;
+    public TreeNode(int val) {
+        this.val = val;
         left = null;
         right = null;
     }
 
-    public TreeNode(int value, TreeNode left, TreeNode right) {
-        this.value = value;
+    public TreeNode(int val, TreeNode left, TreeNode right) {
+        this.val = val;
         this.left = left;
         this.right = right;
     }

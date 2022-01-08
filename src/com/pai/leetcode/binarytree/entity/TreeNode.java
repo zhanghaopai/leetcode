@@ -1,4 +1,4 @@
-package com.pai.leetcode.entity;
+package com.pai.leetcode.binarytree.entity;
 
 /**
  * 二叉树实体

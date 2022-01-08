@@ -1,7 +1,7 @@
 package com.pai.leetcode.util;
 
 
-import com.pai.leetcode.entity.TreeNode;
+import com.pai.leetcode.binarytree.entity.TreeNode;
 
 import java.util.LinkedList;
 import java.util.Queue;

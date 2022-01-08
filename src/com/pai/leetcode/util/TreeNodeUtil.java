@@ -4,12 +4,19 @@ package com.pai.leetcode.util;
 import com.pai.leetcode.binarytree.entity.TreeNode;
 
 import java.util.LinkedList;
+import java.util.List;
 import java.util.Queue;
+import java.util.Stack;
 
 /**
  * leetcode将一维数组转换为TreeNode工具类
  */
 public class TreeNodeUtil {
+    /**
+     * leetcode 层序遍历转换为根节点
+     * @param array 层序遍历数组
+     * @return 根节点
+     */
     public static TreeNode arrayToTree(Integer[] array) {
         if (array.length == 0) {
             return null;
@@ -42,5 +49,29 @@ public class TreeNodeUtil {
             }
         }
         return root;
+    }
+
+    /**
+     * 中序遍历，得到的list可使用list.foreach(System.out::print)打印输出
+     * @param root 根节点
+     * @return
+     */
+    public static List<Integer> inorderTraversal(TreeNode root) {
+        List<Integer> list = new LinkedList<>();
+        Stack<TreeNode> stack = new Stack<>();
+        while (root != null) {
+            stack.push(root);
+            root = root.left;
+        }
+        while (!stack.isEmpty()) {
+            TreeNode current = stack.pop();
+            list.add(current.val);
+            current = current.right;
+            while (current != null) {
+                stack.push(current);
+                current = current.left;
+            }
+        }
+        return list;
     }
 }
